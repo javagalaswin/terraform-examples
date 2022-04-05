@@ -1,0 +1,25 @@
+
+module "cache" {
+  source = "github.com/Patelvijaykumar/terraform-aws-instance"
+
+
+variable "region" {
+  default = "us-east-1"
+}
+
+variable "tag" {}
+variable "ami_name_value" {
+  default = "amzn-ami-vpc-nat*"
+}
+variable "ami_virtualization_type" {
+  default = "hvm"
+}
+  region                     = "us-east-1"
+  tag                        = "my-instance"
+  ami_name_value             = "amzn-ami-vpc-nat*"
+  ami_virtualization_type    = "hvm"
+  instance_type              = "t2.micro"
+  keyname                    = "test.pem"
+
+
+}
